@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">APOD-Nasa-Api</string>
     <string name="txt_generate_photo">Gerar foto</string>
+    <string name="txt_content_image">Nasa images generated</string>
 </resources>

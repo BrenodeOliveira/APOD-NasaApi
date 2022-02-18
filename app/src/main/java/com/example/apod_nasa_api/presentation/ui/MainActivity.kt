@@ -3,6 +3,7 @@ package com.example.apod_nasa_api.presentation.ui
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.bumptech.glide.Glide
 import com.example.apod_nasa_api.R
 import com.example.apod_nasa_api.databinding.ActivityMainBinding
 import com.example.apod_nasa_api.presentation.viewmodel.MainViewModel
@@ -20,8 +21,21 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setContentView(binding.root)
 
+        setupClick()
+        setupObservers()
+    }
+
+    private fun setupClick() {
         binding.btnGeneratePhoto.setOnClickListener {
-            Toast.makeText(this, "botao", Toast.LENGTH_SHORT).show()
+            viewModel.generateImage()
+        }
+    }
+
+    private fun setupObservers() {
+        viewModel.imageGenerated.observe(this) {
+            Glide.with(this)
+                .load(it)
+                .into(binding.imagePhotoGenerated)
         }
     }
 }
