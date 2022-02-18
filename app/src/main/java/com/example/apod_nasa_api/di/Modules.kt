@@ -3,6 +3,7 @@ package com.example.apod_nasa_api.di
 import com.example.apod_nasa_api.data.api.GetApiKeyService
 import com.example.apod_nasa_api.data.repository.ImageRepository
 import com.example.apod_nasa_api.data.repository.ImageRepositoryImpl
+import com.example.apod_nasa_api.data.retrofit.ApiService
 import com.example.apod_nasa_api.data.retrofit.HttpClient
 import com.example.apod_nasa_api.data.source.ImageDataSource
 import com.example.apod_nasa_api.data.source.ImageDataSourceImpl
@@ -12,6 +13,10 @@ import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
 val dataModule = module {
+    factory {
+        HttpClient(retrofit = ApiService.initRetrofit())
+    }
+
     factory {
         get<HttpClient>().create(
             service = GetApiKeyService::class.java
@@ -37,6 +42,6 @@ val domainModule = module {
 
 val presentationModule = module {
     viewModel {
-        MainViewModel()
+        MainViewModel(useCase = get())
     }
 }

@@ -5,12 +5,15 @@ import android.os.Bundle
 import android.widget.Toast
 import com.example.apod_nasa_api.R
 import com.example.apod_nasa_api.databinding.ActivityMainBinding
+import com.example.apod_nasa_api.presentation.viewmodel.MainViewModel
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainActivity : AppCompatActivity() {
 
     private val binding: ActivityMainBinding by lazy {
         ActivityMainBinding.inflate(layoutInflater)
     }
+    private val viewModel: MainViewModel by viewModel()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
