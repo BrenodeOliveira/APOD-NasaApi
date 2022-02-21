@@ -2,7 +2,6 @@ package com.example.apod_nasa_api.presentation.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
 import com.bumptech.glide.Glide
 import com.example.apod_nasa_api.R
 import com.example.apod_nasa_api.databinding.ActivityMainBinding
@@ -36,6 +35,9 @@ class MainActivity : AppCompatActivity() {
             Glide.with(this)
                 .load(it)
                 .into(binding.imagePhotoGenerated)
+            /**
+             * Colocar a descrição da foto ao lado
+             */
         }
     }
 }
