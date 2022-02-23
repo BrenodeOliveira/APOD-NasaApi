@@ -37,6 +37,7 @@ class MainActivity : AppCompatActivity() {
                 .into(binding.imagePhotoGenerated)
             /**
              * Colocar a descrição da foto ao lado
+             * viewPager
              */
         }
     }
