@@ -1,12 +1,12 @@
 package com.example.apod_nasa_api.di
 
-import com.example.apod_nasa_api.data.api.GetApiKeyService
-import com.example.apod_nasa_api.data.repository.ImageRepository
-import com.example.apod_nasa_api.data.repository.ImageRepositoryImpl
-import com.example.apod_nasa_api.data.retrofit.ApiService
-import com.example.apod_nasa_api.data.retrofit.HttpClient
-import com.example.apod_nasa_api.data.source.ImageDataSource
-import com.example.apod_nasa_api.data.source.ImageDataSourceImpl
+import com.example.apod_nasa_api.data.remote.api.GetApiKeyService
+import com.example.apod_nasa_api.data.remote.repository.ImageRepository
+import com.example.apod_nasa_api.data.remote.repository.ImageRepositoryImpl
+import com.example.apod_nasa_api.data.remote.retrofit.ApiService
+import com.example.apod_nasa_api.data.remote.retrofit.HttpClient
+import com.example.apod_nasa_api.data.remote.source.ImageDataSource
+import com.example.apod_nasa_api.data.remote.source.ImageDataSourceImpl
 import com.example.apod_nasa_api.domain.usecase.ImageUseCase
 import com.example.apod_nasa_api.presentation.viewmodel.MainViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel

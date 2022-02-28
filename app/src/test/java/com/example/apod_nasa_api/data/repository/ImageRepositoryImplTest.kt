@@ -1,8 +1,9 @@
 package com.example.apod_nasa_api.data.repository
 
-import com.example.apod_nasa_api.data.model.ImageData
-import com.example.apod_nasa_api.data.model.toModel
-import com.example.apod_nasa_api.data.source.ImageDataSource
+import com.example.apod_nasa_api.data.remote.model.ImageData
+import com.example.apod_nasa_api.data.remote.model.toModel
+import com.example.apod_nasa_api.data.remote.repository.ImageRepositoryImpl
+import com.example.apod_nasa_api.data.remote.source.ImageDataSource
 import io.mockk.coEvery
 import io.mockk.mockk
 import org.junit.Assert.assertEquals

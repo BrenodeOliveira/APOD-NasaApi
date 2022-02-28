@@ -1,4 +1,4 @@
-package com.example.apod_nasa_api.data.model
+package com.example.apod_nasa_api.data.remote.model
 
 import com.example.apod_nasa_api.domain.model.ImageModel
 import com.google.gson.annotations.SerializedName

@@ -1,7 +1,7 @@
-package com.example.apod_nasa_api.data.repository
+package com.example.apod_nasa_api.data.remote.repository
 
-import com.example.apod_nasa_api.data.model.toModel
-import com.example.apod_nasa_api.data.source.ImageDataSource
+import com.example.apod_nasa_api.data.remote.model.toModel
+import com.example.apod_nasa_api.data.remote.source.ImageDataSource
 import com.example.apod_nasa_api.domain.model.ImageModel
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map

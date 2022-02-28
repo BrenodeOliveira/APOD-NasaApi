@@ -1,7 +1,8 @@
 package com.example.apod_nasa_api.data.source
 
-import com.example.apod_nasa_api.data.api.GetApiKeyService
-import com.example.apod_nasa_api.data.model.ImageData
+import com.example.apod_nasa_api.data.remote.api.GetApiKeyService
+import com.example.apod_nasa_api.data.remote.model.ImageData
+import com.example.apod_nasa_api.data.remote.source.ImageDataSourceImpl
 import io.mockk.coEvery
 import io.mockk.mockk
 import kotlinx.coroutines.ExperimentalCoroutinesApi

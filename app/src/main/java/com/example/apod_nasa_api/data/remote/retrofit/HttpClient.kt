@@ -1,4 +1,4 @@
-package com.example.apod_nasa_api.data.retrofit
+package com.example.apod_nasa_api.data.remote.retrofit
 
 import retrofit2.Retrofit
 

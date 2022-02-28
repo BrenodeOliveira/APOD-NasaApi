@@ -1,6 +1,6 @@
-package com.example.apod_nasa_api.data.api
+package com.example.apod_nasa_api.data.remote.api
 
-import com.example.apod_nasa_api.data.model.ImageData
+import com.example.apod_nasa_api.data.remote.model.ImageData
 import retrofit2.http.GET
 import retrofit2.http.Query
 
