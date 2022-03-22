@@ -6,15 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".presentation.ui.MainActivity">
 
-    <ImageView
-        android:id="@+id/imagePhotoGenerated"
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPagerVertical"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:scaleType="center"
-        android:contentDescription="@string/txt_content_image"
+        android:layout_margin="@dimen/margin_32"
+        android:orientation="horizontal"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnGeneratePhoto"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ProgressBar
@@ -26,17 +26,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent" />
-
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/viewPagerVertical"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_margin="@dimen/margin_32"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/btnGeneratePhoto"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textErrorImage"
